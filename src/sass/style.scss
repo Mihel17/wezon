@@ -1,0 +1,62 @@
+//DEFAULD----------------------------
+// @import "default/style.scss";
+//-----------------------------------
+
+//TECHNICAL--------------------------
+//mixin
+@import "./global/mixin.scss";
+
+//vars
+@import "./global/vars.scss";
+//fonts
+// @import "./global/fonts.scss";
+//global
+@import "./global/technical.scss";
+//-----------------------------------
+
+//PAGE-------------------------------
+//main
+@import "./blocks/big/main-page.scss";
+//inner
+// @import "blocks/big/inner-page.scss";
+//-----------------------------------
+
+//BIG BLOCKS-------------------------
+@import "blocks/big/main-header.scss";
+@import "blocks/big/main-footer.scss";
+@import "blocks/big/main-content.scss";
+//-----------------------------------
+
+//SECTION---------------------------
+@import "blocks/main-nav.scss";
+//----------------------------------
+
+//SECTION HOME PAGE-----------------
+// @import "blocks/promo.scss";
+//---------------------------------
+
+//SECTION FORM PAGE----------------
+// @import "blocks/profile-info.scss";
+//-------------------------------
+
+//SECTION CATALOG PAGE-----------
+// @import "blocks/catalog-content.scss";
+//-------------------------------
+
+//BEM BLOCKS---------------------
+@import "blocks/user-bar__lang.scss";
+@import "blocks/drop-nav.scss";
+@import "blocks/search.scss";
+@import "blocks/breadcrumbs.scss";
+@import "blocks/product.scss";
+@import "blocks/contact.scss";
+// @import "blocks/contact.scss";
+// @import "blocks/portfolio.scss";
+// @import "blocks/bonuses.scss";
+//--------------------------------
+
+//FOR JS--------------------------
+// @import "global/js-style.scss";
+//--------------------------------
+
+//END-----------------------------

@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+// const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === 'production'
@@ -24,12 +25,17 @@ module.exports = (env, argv) => {
           {
             from: path.resolve(__dirname, 'src', 'img', 'favicon'),
             to: path.resolve(__dirname, 'dist')
+          },
+          {
+            from: path.resolve(__dirname, 'src', 'img'),
+            to: path.resolve(__dirname, 'dist', 'img')
           }
         ],
       }),
       new MiniCssExtractPlugin({
         filename: filename('css'),
       }),
+      // new SpriteLoaderPlugin(),
     ]
     if (isDev) {
       base.push(new ESLintPlugin())
@@ -82,7 +88,16 @@ module.exports = (env, argv) => {
               presets: ['@babel/preset-env']
             }
           }
-        }
+        },
+        // {
+        //   test: /\.svg$/,
+        //   loader: 'svg-sprite-loader',
+        //   options: {
+        //     extract: true,
+        //     outputPath: './sprites/',
+        //     publicPath: './sprites/'
+        //   }
+        // }
       ],
     },
   }

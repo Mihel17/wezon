@@ -1,0 +1,214 @@
+//ALL-----------------------------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+//--------------------------------
+
+//JUMPING SCROLL------------------
+// @media screen and (min-width: $desktop) {
+//   html {
+//     width: 100vw;
+//     overflow-x: hidden;
+//   }
+// }
+//--------------------------------
+
+//INPUT---------------------------
+input {
+  width: 100%;
+}
+//--------------------------------
+// CONTAINER----------------------
+.container {
+  min-width: $minWidth;
+  // height: fit-content;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    padding: 0 $mobile-gap;
+  }
+
+  @media (min-width: $tablet) {
+    // max-width: $maxContainerTablet;
+    width: 100%;
+    padding: 0 $min-gap;
+  }
+
+  @media (min-width: $tabletMax) {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 $tablet-gap;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: $maxContainerDesktop;
+    width: 100%;
+    padding: 0 $min-gap;
+  }
+
+  @media (min-width: $desktopMax) {
+    max-width: $maxWidthContainer;
+    width: 100%;
+    padding: 0 $desktop-gap;
+  }
+}
+//--------------------------------
+
+// BREAK--------------------------
+.mobile-break {
+  display: none;
+
+  @media (max-width: 325px) {
+    display: block;
+  }
+}
+
+.tablet-break {
+  display: none;
+
+  @media (min-width: $tablet) and (max-width: 775px) {
+    display: block;
+  }
+}
+
+.desktop-break {
+  display: none;
+
+  @media (min-width: $desktop) and (max-width: 1445px) {
+    display: block;
+  }
+}
+//--------------------------------
+
+// HIDE / SHOW--------------------
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: grid;
+}
+
+.disabled {
+  pointer-events: none;
+}
+//--------------------------------
+
+// IMG----------------------------
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+//--------------------------------
+// SVG----------------------------
+svg {
+  touch-action: none;
+}
+//--------------------------------
+
+// HEADING------------------------
+h1 {
+  font-size: 24px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+  }
+}
+
+h2 {
+  font-size: 22px;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 26px;
+  }
+}
+
+h3 {
+  font-size: 16px;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
+}
+
+//--------------------------------
+
+// BTN----------------------------
+button {
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+//--------------------------------
+
+// LINK---------------------------
+a {
+  color: $blue-g;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: darken($blue-g, 20);
+}
+
+.no-style {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+//--------------------------------
+
+// PARAGRAPH----------------------
+p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+//--------------------------------
+
+// LIST---------------------------
+ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  list-style: none;
+}
+//--------------------------------
+
+//END-----------------------------

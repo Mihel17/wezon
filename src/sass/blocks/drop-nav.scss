@@ -1,0 +1,28 @@
+.drop-nav {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 25px 20.5px 21.5px;
+  border-radius: 18px 0 0 0;
+  color: white;
+  background-color: $yellow;
+}
+
+.drop-nav__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.drop-nav__text {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.drop-nav__add-text {
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: underline;
+  margin: 0 0 0 auto;
+}

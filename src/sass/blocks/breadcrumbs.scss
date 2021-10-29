@@ -1,0 +1,48 @@
+.breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  grid-area: breadcrumbs;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.breadcrumbs__item {
+  font-size: 12px;
+  line-height: 120%;
+  margin-bottom: 10px;
+  color: $text-blue;
+}
+
+.breadcrumbs__item a {
+  opacity: 0.5;
+}
+
+.breadcrumbs__item a:hover {
+  opacity: 0.5;
+}
+
+.breadcrumbs__item:not(:last-child) a[href]:hover,
+.breadcrumbs__item:not(:last-child) a[href]:active {
+  opacity: 0.8;
+}
+
+.breadcrumbs__item:not(:last-child) {
+  display: grid;
+  grid-template-columns: 1fr 12px;
+  column-gap: 7px;
+  margin-right: 7px;
+  align-items: center;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: "—";
+  display: block;
+  color: $text-blue;
+  opacity: 0.5;
+}
+
+.breadcrumbs__item:last-child {
+  margin-right: 0;
+}

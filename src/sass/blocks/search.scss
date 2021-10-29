@@ -1,0 +1,21 @@
+.search {
+  height: 100%;
+  width: 100%;
+  padding: 5px 0;
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.search__input {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 120%;
+  padding: 0 19px;
+  background-color: $light-blue;
+  color: $text-blue;
+  border: none;
+}
