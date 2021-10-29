@@ -1,0 +1,26 @@
+.user-bar__lang {
+  position: relative;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  justify-content: center;
+  align-items: center;
+}
+
+.user-bar__lang::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  order: 2;
+  background-color: $grey-bool;
+}
+
+.user-bar__lang-item {
+  padding-left: 15px;
+  padding-right: 15px;
+}

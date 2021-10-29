@@ -1,0 +1,62 @@
+// COLORES----------------------------
+// google colores
+$blue-g: lighten(#4285f4, 0.2%);
+$light-blue-g: rgba($blue-g, 0.2);
+$yellow-g: lighten(#fbbc04, 0.2%);
+$light-yellow-g: rgba($yellow-g, 0.3);
+$green-g: lighten(#34a853, 0.2%);
+$light-green-g: rgba($green-g, 0.2);
+$red-g: lighten(#ea4335, 0.2%);
+$light-red-g: rgba($red-g, 0.2);
+$grey-g: #5f6368;
+$light-grey-g: rgba($grey-g, 0.01);
+// project colores
+// $white: #ffffff;
+// $black: #000000;
+$yellow-btn: #ffa800;
+$yellow: #ffbe48;
+$grey-bool: #dde8f0;
+$artic-blue: #5c6d7d;
+$main-blue: #34495e;
+$text-blue: #33485d;
+$light-blue: #dde8f0;
+$dark-green: #0d4128;
+$green: #229754;
+$red: #eb5757;
+// $blue: #34495e;
+// $light-blue: #1d2e5b;
+// $dark-blue: #161c35;
+// $light-blue-bg: #e2e5f2;
+// $light-blue-modal: #f3f4f8;
+// $light-blue-profile: #e5e5e5;
+// status colores
+// $ofline: #f97676;
+// $online: #81e31e;
+//-----------------------------------
+
+//FONT-------------------------------
+$font: "Roboto", -apple-system, "BlinkMacSystemFontb", "Segoe UI", helvetica, arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+//-----------------------------------
+
+//MEDIA------------------------------
+// breakpoints
+$mobile: 320px;
+$tablet: 400px;
+$tabletMax: 769px;
+$desktop: 992px;
+$desktopMax: 1440px;
+// gap
+$mobile-gap: 20px;
+$min-gap: 20px;
+$tablet-gap: 20px;
+$desktop-gap: 20px;
+// max-min
+$minWidth: $mobile;
+$maxWidth: 1920px;
+$maxContainerTablet: 728px;
+$maxContainerDesktop: 1522px;
+$maxWidthContainer: 1522px;
+//----------------------------------
+
+//END------------------------------

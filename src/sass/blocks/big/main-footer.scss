@@ -1,0 +1,24 @@
+.main-footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 44px;
+  color: white;
+}
+
+.main-footer__copy {
+  margin: 0;
+  padding: 0;
+}
+
+.main-footer__wezon {
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.5;
+  color: white;
+}
+
+.main-footer__wezon:hover {
+  color: white;
+  opacity: 1;
+}

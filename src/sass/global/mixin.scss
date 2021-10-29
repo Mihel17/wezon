@@ -1,0 +1,76 @@
+// @mixin name($var1, $var2) {
+//   property: value;
+//   property: $var1;
+//   property: $var2;
+// }
+
+// @include name(x, y);
+
+//BODY----------------------------
+
+@mixin body {
+  font-family: $font;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 22px;
+  z-index: -10;
+  display: grid;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  // overflow-x: hidden;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+}
+
+@mixin body-normal {
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas:
+    "main-header"
+    "main-content"
+    "main-footer";
+}
+
+@mixin body-left-header {
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "main-header main-content";
+
+  @media (max-width: $desktop) {
+    display: block;
+  }
+}
+
+//--------------------------------
+
+@mixin title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin subtitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin inner-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin inner-subtitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+//--------------------------------
+
+//END-----------------------------
