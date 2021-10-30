@@ -592,8 +592,9 @@
       <section class="contact">
         <h2 class="contact__title  visually-hidden">Тестовый товар для верстки</h2>
         <p class="contact__calltoaction">Нужна помощь в подборе товара? Мы перезваниваем !</p>
-        <form class="contact__form" method="get" action="">
-          <input class="contact__input" id="contact" type="tel" name="contact" placeholder="+38 (0xx) xx - xx - xxx">
+        <form class="contact__form" method="get" action="" autocomplete="off">
+          <input class="contact__input" data-tel id="contact" type="tel" name="contact"
+            placeholder="+38 (0xx) xx - xx - xxx">
           <label class="visually-hidden" for="contact">Search</label>
           <button class="contact__btn btn" type="submit">Отправить</button>
         </form>

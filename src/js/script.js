@@ -4,5 +4,4 @@ import './characteristics'
 import './review'
 import './cart'
 import './gallery'
-
-console.log('script');
+import './tel-input'
