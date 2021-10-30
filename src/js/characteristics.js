@@ -9,6 +9,7 @@ characteristicBtn.addEventListener('click', () => {
     const item = characteristics.cloneNode(true);
     characteristicsList.append(item);
   }
+  characteristicBtn.remove();
 }, { once: true })
 
 
