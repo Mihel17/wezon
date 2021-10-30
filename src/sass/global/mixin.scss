@@ -73,4 +73,18 @@
 
 //--------------------------------
 
+@mixin icon-before {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+@mixin icon-after {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 10px;
+  align-items: center;
+}
+
 //END-----------------------------

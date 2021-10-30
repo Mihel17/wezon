@@ -2,6 +2,18 @@
 .page {
   @include body;
   @include body-normal;
+  position: relative;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  top: 170px;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 1500px;
+  background: linear-gradient(180deg, #219653 0%, #ffffff 50%);
 }
 //-----------------------------------
 
@@ -18,7 +30,6 @@
 
 .page__content {
   grid-area: main-content;
-  background: linear-gradient(180deg, #219653 0%, #ffffff 50%);
 }
 
 .page__footer {

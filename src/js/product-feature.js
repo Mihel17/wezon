@@ -7,8 +7,8 @@ for (const item of features) {
 }
 
 const onFeaturesClick = (evt) => {
-  const featureText = evt.target.querySelector('.product__feature-text');
-  featureText.classList.toggle('visually-hidden');
+  evt.target.querySelector('.product__feature-text').classList.toggle('visually-hidden');
+  evt.target.querySelector('.product__feature-arrow').classList.toggle('product__feature-arrow--open');
 }
 
 featuresContainer.addEventListener('click', onFeaturesClick);

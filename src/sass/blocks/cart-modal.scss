@@ -1,0 +1,84 @@
+.cart-modal {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + 20px);
+  right: 11px;
+  background-color: white;
+  width: 338px;
+  height: 280px;
+  box-shadow: 0px 10px 80px rgba(0, 52, 41, 0.3);
+  border-radius: 10px;
+  padding: 30px;
+  display: grid;
+  row-gap: 30px;
+}
+
+.cart-modal--hidden-js {
+  display: none;
+}
+
+.cart-modal::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: -18px;
+  right: 0;
+  width: 338px;
+  height: 280px;
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='338' height='278' viewBox='0 0 338 278' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 268C0 273.523 4.47715 278 10 278H328C333.523 278 338 273.523 338 268V28C338 22.4772 333.523 18 328 18H300L284.08 1.67179C282.118 -0.340873 278.882 -0.34087 276.92 1.6718L261 18H10C4.47715 18 0 22.4772 0 28V268Z' fill='white'/%3e%3cpath d='M0 268C0 273.523 4.47715 278 10 278H328C333.523 278 338 273.523 338 268V28C338 22.4772 333.523 18 328 18H308.433C303.041 18 297.877 15.8228 294.113 11.962L284.08 1.67178C282.118 -0.340882 278.882 -0.340882 276.92 1.67178L266.887 11.962C263.123 15.8228 257.959 18 252.567 18H10C4.47715 18 0 22.4772 0 28V268Z' fill='white'/%3e%3c/svg%3e ")
+    no-repeat center center;
+}
+
+.cart-modal__order {
+  @include icon-after;
+  min-height: 60px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  color: white;
+  background-color: rgba($blue-cart, 0.9);
+  padding: 15px 20px;
+  border-radius: 10px 0 10px 0;
+  transition: all 0.3s;
+
+  svg path {
+    fill: white;
+  }
+}
+
+.cart-modal__edit {
+  width: fit-content;
+  justify-content: start;
+}
+
+.cart-modal__order:hover {
+  color: white;
+  background-color: $blue-cart;
+}
+
+.cart-modal__order:active {
+  color: white;
+  background-color: rgba($blue-cart, 0.9);
+}
+
+.cart-modal__list-group {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.cart-modal__dt {
+  font-size: 18px;
+  line-height: 21px;
+  color: #5c6d7d;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-modal__dd {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #33485d;
+  margin: 0;
+  padding: 0;
+}
