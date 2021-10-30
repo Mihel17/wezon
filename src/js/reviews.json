@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Шевченко Александра",
+    "date": "24 августа 2021",
+    "rating": 4,
+    "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime commodi provident nihil dolore, voluptatem distinctio alias officia vero, eius aliquam tempora debitis eligendi unde. Officia dolorem cum repudiandae impedit facilis?"
+  },
+  {
+    "name": "Сидорченко Анастасия",
+    "date": "11 июня 2021",
+    "rating": 5,
+    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quis voluptatibus voluptatum aut facilis eius, ipsa velit id aperiam impedit enim officiis cumque rem esse architecto non sequi nisi magni!"
+  },
+  {
+    "name": "Федосеев Константин",
+    "date": "3 февраля 2021",
+    "rating": 5,
+    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum at facere velit, nobis esse quam similique aspernatur. Possimus placeat quae optio culpa doloribus voluptas sed, in iste natus quis harum?"
+  },
+  {
+    "name": "Волков Тимур",
+    "date": "17 апреля 2021",
+    "rating": 5,
+    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis veniam, voluptates quod odio sapiente, alias ratione, facilis id harum necessitatibus quae debitis aliquid laudantium. Error deleniti inventore incidunt iusto velit."
+  },
+  {
+    "name": "Браун Николь",
+    "date": "1 января 2020",
+    "rating": 5,
+    "review": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quia ipsa eaque non officiis eum laboriosam laudantium maxime quidem. Ad nostrum asperiores iure repudiandae ab placeat illo iusto laborum dignissimos?"
+  }
+]

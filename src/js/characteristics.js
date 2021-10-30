@@ -1,7 +1,7 @@
 const characteristicsContainer = document.querySelector('.product__characteristics');
 const characteristicsList = characteristicsContainer.querySelector('.product__characteristics-list');
-const characteristicBtn = characteristicsContainer.querySelector('.product__characteristics-btn');
-const characteristics = characteristicsContainer.querySelector('#characteristics').content.querySelector('.product__characteristics');
+const characteristicBtn = characteristicsContainer.querySelector('.product__characteristics-btn--js');
+const characteristics = characteristicsContainer.querySelector('#characteristics').content.querySelector('.product__characteristics-item');
 const ITEMS_FROM_SERVER = 3;
 
 characteristicBtn.addEventListener('click', () => {
@@ -9,6 +9,6 @@ characteristicBtn.addEventListener('click', () => {
     const item = characteristics.cloneNode(true);
     characteristicsList.append(item);
   }
-})
+}, { once: true })
 
 
