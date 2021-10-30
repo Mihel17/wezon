@@ -15,6 +15,13 @@
   grid-area: breadcrumbs;
 }
 
+.product__photo-btn {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: none;
+}
+
 .product__photos {
   grid-area: photos;
   display: grid;
@@ -23,10 +30,21 @@
 
 .product__photos-list {
   width: fit-content;
+  display: grid;
+  margin: 0;
+  height: fit-content;
 }
 
-.product__photo--active {
-  border: 2px solid $green;
+.product__photo-btn:hover {
+  outline: 2px solid $green;
+  position: relative;
+  z-index: 2;
+}
+
+.product__photo-btn--active {
+  outline: 2px solid $green;
+  position: relative;
+  z-index: 2;
 }
 
 .product__about {
