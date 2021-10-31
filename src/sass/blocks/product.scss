@@ -1,7 +1,7 @@
 .product {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: max-content repeat(2, 1fr);
+  grid-template-rows: max-content max-content 1fr;
   grid-template-areas:
     "breadcrumbs breadcrumbs"
     "photos action-bar"
