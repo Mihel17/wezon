@@ -6,18 +6,21 @@
     "breadcrumbs breadcrumbs"
     "photos action-bar"
     "characteristics reviews";
-  padding: 20px 44px 38px;
+  padding: 20px 163px 38px 44px;
   background-color: white;
-  row-gap: 70px;
 }
 
 .product__breadcrumbs {
   grid-area: breadcrumbs;
 }
 
-// .product__full-photo {
-//   transition: all 0.3s;
-// }
+.product__full-photo {
+  width: 580px;
+  min-width: 580px;
+  height: 580px;
+  min-height: 580px;
+  margin: 9px 0 0 7px;
+}
 
 .product__full-photo--animation {
   opacity: 0;
@@ -30,19 +33,55 @@
   background-color: none;
   outline: 2px solid white;
   transition: all 0.3s;
+  border-radius: 5px;
 }
 
 .product__photos {
   grid-area: photos;
   display: grid;
   grid-template-columns: max-content 1fr;
+  position: relative;
 }
 
 .product__photos-list {
+  position: relative;
   width: fit-content;
   display: grid;
   margin: 0;
   height: fit-content;
+  margin: 45px 0px 0 1px;
+}
+
+.product__photo-nav {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: calc(120px / 2 - 60px / 2);
+  width: 60px;
+  height: 40px;
+  background: transparent
+    url("data:image/svg+xml;charset=UTF-8,%3csvg width='29' height='16' viewBox='0 0 29 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M28.3673 13.3844C28.7578 13.775 28.7578 14.4081 28.3673 14.7987C27.9768 15.1892 27.3436 15.1892 26.9531 14.7987L14.5891 2.43468L2.22518 14.7987C1.83465 15.1892 1.20148 15.1892 0.81096 14.7987C0.420435 14.4081 0.420435 13.775 0.81096 13.3844L13.882 0.31336C14.2726 -0.0771608 14.9057 -0.0771608 15.2963 0.31336L28.3673 13.3844Z' fill='%2333485D'/%3e%3c/svg%3e ")
+    no-repeat center center;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.product__photo-nav:hover {
+  background-color: rgba($green, 0.1);
+}
+
+.product__photo-nav:active {
+  background-color: rgba($green, 0.2);
+}
+
+.product__photo-nav--before {
+  top: -6px;
+}
+
+.product__photo-nav--next {
+  top: 560px;
+  transform: rotate(180deg);
 }
 
 .product__photo-btn:hover {
@@ -61,7 +100,8 @@
   grid-area: action-bar;
   display: grid;
   grid-template-rows: max-content max-content 1fr;
-  row-gap: 26px;
+  row-gap: 13px;
+  margin: 17px 0 0 17px;
 }
 
 .product__about-header {
@@ -73,6 +113,20 @@
 .product__characteristics {
   grid-area: characteristics;
   padding-left: calc(163px - 44px);
+  display: grid;
+  grid-template-rows: max-content max-content 1fr;
+  margin: 4px 0 0;
+}
+
+.product__characteristics-btn--js {
+  height: fit-content;
+  width: fit-content;
+  justify-content: start;
+  margin-top: 24px;
+}
+
+.product__characteristics-list {
+  margin: 23px 0 0;
 }
 
 .product__reviews {
@@ -105,6 +159,7 @@
 
 .product__rating-stars {
   display: flex;
+  gap: 4px;
 }
 
 .product__rating-star svg {
@@ -128,6 +183,7 @@
   font-size: 14px;
   line-height: 120%;
   color: $artic-blue;
+  margin: 0;
 }
 
 .product__artic-number {
@@ -180,6 +236,10 @@
   line-height: 120%;
   color: $red;
   padding: 39px 21px 19px;
+  margin: 0;
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
 
 .product__old-price {
@@ -220,7 +280,7 @@
   color: white;
   border: none;
   transition: all 0.3s;
-  margin: 0 10px 0 0;
+  margin: 0 7px 0 0;
   border: none;
   display: grid;
   justify-content: start;
@@ -248,6 +308,7 @@
 
 .product__features {
   border-top: 1px solid $light-blue;
+  margin: 11px 0 0 0;
 }
 
 .product__feature {
@@ -256,10 +317,11 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 120%;
-  padding: 30px 0;
+  padding: 30px 13px;
   color: $artic-blue;
   border-bottom: 1px solid $light-blue;
   transition: all 0.3s;
+  row-gap: 0;
 }
 
 .product__feature:hover {
@@ -271,7 +333,7 @@
   width: 6px;
   height: 9px;
   top: 37.5px;
-  right: 0;
+  right: 7px;
   background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.08634 0.186357C0.837823 -0.0621424 0.434902 -0.0621424 0.186386 0.186357C-0.0621292 0.434857 -0.0621292 0.837803 0.186386 1.0863L3.55459 4.45451L0.186386 7.82271C-0.0621289 8.07123 -0.0621289 8.47416 0.186387 8.72267C0.434902 8.97119 0.837824 8.97119 1.08634 8.72267L4.90452 4.90449C5.15304 4.65597 5.15304 4.25305 4.90452 4.00453L1.08634 0.186357Z' fill='%2333485D'/%3e%3c/svg%3e ")
     no-repeat center center;
 }

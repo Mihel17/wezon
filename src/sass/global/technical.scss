@@ -19,6 +19,39 @@
 //INPUT---------------------------
 input {
   width: 100%;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  color: $text-blue;
+
+  $input-font-size: 17px;
+  &::-webkit-input-placeholder {
+    font-weight: 400;
+    font-size: $input-font-size;
+    line-height: 120%;
+    color: $text-blue;
+  }
+
+  &::-moz-placeholder {
+    font-weight: 400;
+    font-size: $input-font-size;
+    line-height: 120%;
+    color: $text-blue;
+  }
+
+  &:-moz-placeholder {
+    font-weight: 400;
+    font-size: $input-font-size;
+    line-height: 120%;
+    color: $text-blue;
+  }
+
+  &:-ms-input-placeholder {
+    font-weight: 400;
+    font-size: $input-font-size;
+    line-height: 120%;
+    color: $text-blue;
+  }
 }
 //--------------------------------
 // CONTAINER----------------------
@@ -65,6 +98,7 @@ input {
   font-weight: 400;
   font-size: 30px;
   line-height: 120%;
+  margin-bottom: 10px;
 }
 
 .h3__span {
@@ -130,6 +164,8 @@ img {
   display: block;
   max-width: 100%;
   object-fit: contain;
+  padding: 0;
+  margin: 0;
 }
 
 //--------------------------------
@@ -214,7 +250,7 @@ button {
   padding-left: 0;
   position: relative;
   display: grid;
-  gap: 7px;
+  gap: 14px;
   transition: all 0.2s;
 }
 
@@ -244,13 +280,14 @@ button {
 
 // LINK---------------------------
 a {
-  color: $blue-g;
+  color: rgba($text-blue, 0.9);
   text-decoration: none;
   background-color: transparent;
 }
 
-a:hover {
-  color: darken($blue-g, 20);
+a:hover,
+a:active {
+  color: $text-blue;
 }
 
 .no-style {

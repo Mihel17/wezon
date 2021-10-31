@@ -1,5 +1,5 @@
-const photoContainer = document.querySelector('.product__photos');
-const mainPhoto = photoContainer.querySelector('.product__full-photo');
+const photoContainer = document.querySelector('.product__photos-list');
+const mainPhoto = document.querySelector('.product__full-photo');
 
 const showMainPhoto = () => {
   mainPhoto.style.transition = 'all 0.3s';

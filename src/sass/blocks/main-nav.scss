@@ -1,13 +1,14 @@
 .main-nav {
   min-height: 128px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 266px;
-  grid-template-rows: 1fr 60px;
+  grid-template-columns: max-content 1fr 1fr 266px;
+  grid-template-rows: max-content 60px;
   grid-template-areas:
     "logo main-nav tel user-bar"
     "drop-nav search search actions";
   column-gap: 15px;
   padding: 0 40px;
+  row-gap: 19px;
 }
 
 .main-nav__logo {
@@ -22,7 +23,8 @@
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 18px;
+  margin: 10px 0 0 5px;
 }
 
 .main-nav__item {
@@ -31,11 +33,23 @@
   position: relative;
 }
 
-.main-nav__item:hover {
-  border-bottom: 1px solid $main-blue;
+.main-nav__link {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba($text-blue, 0.9);
+
+  border-bottom: 1px solid transparent;
 }
 
-.main-nav__item::before {
+.main-nav__link:hover,
+.main-nav__link:active,
+.main-nav__link--active {
+  color: $text-blue;
+  border-bottom: 1px solid $text-blue;
+}
+
+.main-nav__item:not(:first-child)::before {
   display: block;
   content: "";
   position: relative;
@@ -50,6 +64,10 @@
 .main-nav__tel {
   grid-area: tel;
   text-align: end;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 120%;
+  margin: 13px 2px 0 0;
 }
 
 .main-nav__user-bar {
@@ -57,10 +75,13 @@
   display: grid;
   grid-template-columns: 1fr max-content;
   justify-content: end;
+  margin: 10px 19px 0 0;
+  gap: 14px;
 }
 
 .main-nav__drop {
   grid-area: drop-nav;
+  min-width: 371px;
 }
 
 .main-nav__search {
