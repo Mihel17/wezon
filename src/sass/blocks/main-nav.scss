@@ -1,7 +1,7 @@
 .main-nav {
   min-height: 128px;
   display: grid;
-  grid-template-columns: max-content 1fr 1fr 266px;
+  grid-template-columns: max-content 1fr max-content 266px;
   grid-template-rows: max-content 60px;
   grid-template-areas:
     "logo main-nav tel user-bar"
