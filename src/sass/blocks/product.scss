@@ -27,10 +27,13 @@
 }
 
 .product__photo-btn {
+  display: block;
+  width: 120px;
+  min-width: 120px;
+  height: 120px;
   margin: 0;
   padding: 0;
   border: 0;
-  background-color: none;
   outline: 2px solid white;
   transition: all 0.3s;
   border-radius: 5px;
@@ -39,17 +42,21 @@
 .product__photos {
   grid-area: photos;
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 120px 1fr;
   position: relative;
 }
 
 .product__photos-list {
+  position: relative;
+  width: 120px;
+  height: 580px;
   position: relative;
   width: fit-content;
   display: grid;
   margin: 0;
   height: fit-content;
   margin: 45px 0px 0 1px;
+  gap: 7px;
 }
 
 .product__photo-nav {
