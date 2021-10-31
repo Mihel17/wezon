@@ -251,6 +251,10 @@
   border-bottom: 1px solid $light-blue;
 }
 
+.product__feature:hover {
+  background-color: rgba($green, 0.05);
+}
+
 .product__feature-arrow {
   position: absolute;
   width: 6px;
@@ -302,6 +306,8 @@
   grid-column: 1 / -1;
   font-weight: 400;
   margin-top: 10px;
+
+  transition: all 0.3s;
 }
 
 .product__characteristics-item {
