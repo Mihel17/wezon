@@ -5,12 +5,13 @@
   right: -5px;
   background-color: white;
   width: 338px;
-  height: 280px;
+  height: 260px;
   box-shadow: 0px 10px 80px rgba(0, 52, 41, 0.3);
   border-radius: 10px;
   padding: 30px;
   display: grid;
-  row-gap: 30px;
+  row-gap: 39px;
+  grid-template-rows: max-content max-content 1fr;
 }
 
 .cart-modal--hidden-js {
@@ -49,6 +50,10 @@
 .cart-modal__edit {
   width: fit-content;
   justify-content: start;
+  margin: -5px 0 auto 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
 }
 
 .cart-modal__order:hover {
@@ -61,9 +66,13 @@
   background-color: rgba($blue-cart, 0.9);
 }
 
+.cart-modal__list {
+  margin: 0;
+}
+
 .cart-modal__list-group {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 88px 1fr;
 }
 
 .cart-modal__dt {
