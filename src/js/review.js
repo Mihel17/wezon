@@ -10,8 +10,13 @@ reviewBtn.addEventListener('click', () => {
     review.querySelector('.review__date').textContent = item.date;
     review.querySelector('.review__text').textContent = item.review;
     review.classList.add('review__item--js')
-    // const rating = item.rating;
-    // console.log(rating);
+
+    for (let i = 0; i < item.rating; i++) {
+      const rating = review.querySelector('.review__rating').children;
+      rating[i].classList.add('product__rating-star--active')
+      console.log(`${item.name} ${item.rating} ${rating[i]}`)
+    }
+
     reviewContainer.append(review);
     reviewBtn.addEventListener('click', (onReviewBtnClick));
   }
