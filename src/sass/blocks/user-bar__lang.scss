@@ -24,8 +24,29 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 120%;
+}
+
+.user-bar__lang-btn {
+  border: none;
   padding-left: 15px;
   padding-right: 15px;
+  background: transparent;
+}
+
+.user-bar__lang-item:first-child .user-bar__lang-btn:hover {
+  color: rgba($yellow, 0.8);
+}
+
+.user-bar__lang-item:first-child .user-bar__lang-btn:active {
+  color: $yellow;
+}
+
+.user-bar__lang-item:last-child .user-bar__lang-btn:hover {
+  color: rgba($yellow, 0.8);
+}
+
+.user-bar__lang-item:last-child .user-bar__lang-btn:active {
+  color: $yellow;
 }
 
 .user-bar__login {
@@ -37,6 +58,13 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 120%;
+}
+
+.user-bar__login:hover {
+  color: rgba($yellow, 0.8);
+}
+.user-bar__login:active {
+  color: $yellow;
 }
 
 .user-bar__login::after {

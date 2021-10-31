@@ -38,13 +38,22 @@
   font-size: 14px;
   line-height: 24px;
   color: rgba($text-blue, 0.9);
-
   border-bottom: 1px solid transparent;
 }
 
-.main-nav__link:hover,
-.main-nav__link:active,
-.main-nav__link--active {
+.main-nav__link:hover {
+  color: rgba($yellow, 0.8);
+  border-bottom: 1px solid $yellow;
+}
+
+.main-nav__link:active {
+  color: $yellow;
+  border-bottom: 1px solid $yellow;
+}
+
+.main-nav__link--active,
+.main-nav__link--active:hover,
+.main-nav__link--active:active {
   color: $text-blue;
   border-bottom: 1px solid $text-blue;
 }

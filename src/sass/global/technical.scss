@@ -285,9 +285,12 @@ a {
   background-color: transparent;
 }
 
-a:hover,
+a:hover {
+  color: rgba($yellow, 0.8);
+}
+
 a:active {
-  color: $text-blue;
+  color: $yellow;
 }
 
 .no-style {
