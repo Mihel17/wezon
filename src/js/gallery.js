@@ -24,13 +24,14 @@ const onPhotoContainerClick = (evt) => {
 }
 photoContainer.addEventListener('click', onPhotoContainerClick);
 
+const VISIBLY_ELEMENTS = 4;
 const hiddeElements = () => {
   for (let i = 0; i < photoBtns.length; i++) {
     photoBtns[i].setAttribute(`data-number`, `${i}`);
-    if (photoBtns[i].dataset.number > 3) {
+    if (photoBtns[i].dataset.number > VISIBLY_ELEMENTS - 1) {
       photoBtns[i].classList.add('product__photo-btn--hidden')
     } else {
-      photoBtns[i].classList.remove('product__photo-btn--hidden')
+      setTimeout(() => photoBtns[i].classList.remove('product__photo-btn--hidden'), 0.3)
     }
   }
 }
@@ -42,6 +43,8 @@ toTop.addEventListener('click', () => {
 });
 toBottom.addEventListener('click', () => {
   const lastEl = photoBtns[photoBtns.length - 1];
-  photoContainer.prepend(lastEl);
+  photoContainer.prepend(lastEl)
   hiddeElements()
+  photoBtns[0].classList.remove('opacity')
 });
+
