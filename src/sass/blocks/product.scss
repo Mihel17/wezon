@@ -35,8 +35,22 @@
   padding: 0;
   border: 0;
   outline: 2px solid white;
-  transition: all 0.3s;
+  transition: opacity 0.3s;
   border-radius: 5px;
+}
+
+.product__photo-btn--hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  opacity: 0;
 }
 
 .product__photos {
@@ -53,10 +67,13 @@
   position: relative;
   width: fit-content;
   display: grid;
+  grid-template-rows: repeat(4, 1fr);
   margin: 0;
   height: fit-content;
   margin: 45px 0px 0 1px;
   gap: 7px;
+  overflow: hidden;
+  padding: 2px;
 }
 
 .product__photo-nav {

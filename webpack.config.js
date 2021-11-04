@@ -4,6 +4,10 @@ const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 // const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const chalk = require('chalk');
+
+// start message
+console.log(chalk.bgWhite.black(' ☘️.  START ☘️ ', ' '));
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === 'production'
@@ -60,6 +64,14 @@ module.exports = (env, argv) => {
         '@': path.resolve(__dirname, 'src'),
         '@core': path.resolve(__dirname, 'core')
       }
+    },
+    stats: {
+      all: undefined,
+      hash: true,
+      modules: false,
+      colors: true,
+      entrypoints: false,
+      assets: false,
     },
     plugins: plugins(),
     devServer: {
